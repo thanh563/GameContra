@@ -1,14 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 2f;
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float fallMultiplier = 2.5f;  // Faster falling
     [SerializeField] private float lowJumpMultiplier = 2f; // Shorter jump if button is released early
     [SerializeField] private float health = 100;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private Image hpFill;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -22,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0) return;
+
         // Movement
         float moveInput = Input.GetAxisRaw("Horizontal");
         Vector3 move = speed * Time.deltaTime * new Vector3(moveInput, 0f, 0f);
@@ -79,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             health -= 10;
+            hpFill.fillAmount = health / 100;
             if (health <= 0)
             {
                 // trigger death animation
