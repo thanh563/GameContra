@@ -6,12 +6,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 10f;
     [SerializeField] private float fallMultiplier = 2.5f;  // Faster falling
     [SerializeField] private float lowJumpMultiplier = 2f; // Shorter jump if button is released early
+    [SerializeField] private float health = 100;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;
-
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
 
     private void Start()
     {
@@ -73,17 +74,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Enemy"))
-    //    {
-    //        health -= 10;
-    //        if (health <= 0)
-    //        {
-    //            // trigger death animation
-    //            animator.SetTrigger("Death");
-    //            this.enabled = false;
-    //        }
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            health -= 10;
+            if (health <= 0)
+            {
+                // trigger death animation
+                animator.SetTrigger("Death");
+                this.enabled = false;
+            }
+        }
+    }
 }
