@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -46,13 +47,6 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
         ApplyBetterJump();
-
-        //if (Input.GetKeyDown(KeyCode.C))
-        //{
-        //    // trigger death animation
-        //                animator.SetTrigger("Death");
-        //                this.enabled = false;
-        //}
     }
 
     private void ApplyBetterJump()
@@ -73,17 +67,25 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Enemy"))
-    //    {
-    //        health -= 10;
-    //        if (health <= 0)
-    //        {
-    //            // trigger death animation
-    //            animator.SetTrigger("Death");
-    //            this.enabled = false;
-    //        }
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            health -= 10;
+            hpFill.fillAmount = health / 100;
+            if (health <= 0)
+            {
+                // trigger death animation
+                animator.SetTrigger("Death");
+                this.enabled = false;
+                StartCoroutine(WaitForDeathAnimation());
+            }
+        }
+    }
+
+    private IEnumerator WaitForDeathAnimation()
+    {
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
+        Time.timeScale = 0;
+    }
 }
