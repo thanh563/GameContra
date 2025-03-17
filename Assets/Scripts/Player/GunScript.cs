@@ -4,56 +4,87 @@ using UnityEngine;
 public class GunScript : MonoBehaviour
 {
     [SerializeField]
-    private GameObject projectilePrefab;
+    private GameObject bulletPrefab;
 
     [SerializeField]
     private Transform firePoint;
 
     [SerializeField]
-    private Transform playerTransform;
+    private GameObject player;
 
-    private List<GameObject> projectiles;
-    private readonly int amoSize = 5;
+    private List<GameObject> bullets;
+    private readonly int amoSize = 15;
 
+    public int currentUpgrade = 0;
     private void Start()
     {
-        projectiles = new List<GameObject>();
+        bullets = new List<GameObject>();
         for (int i = 0; i < amoSize; i++)
         {
-            GameObject projectile = Instantiate(projectilePrefab);
-            projectiles.Add(projectile);
+            GameObject projectile = Instantiate(bulletPrefab);
+            bullets.Add(projectile);
         }
+    }
+
+    public void UpgradeGun()
+    {
+        float scale = currentUpgrade * 0.01f;
+        foreach (GameObject bullet in bullets)
+        {
+            bullet.GetComponent<BulletScript>().currentDamage += currentUpgrade * 10f;
+            bullet.transform.localScale += new Vector3(scale, scale, scale);
+        }
+        
     }
 
     void Update()
     {
+        if (Time.timeScale == 0) return;
+
         if (Input.GetMouseButtonDown(0))
         {
-            FireProjectile();
+            if (currentUpgrade == 0 || currentUpgrade == 1)
+            {
+                FireProjectile(0);
+            }
+            else if (currentUpgrade == 2 || currentUpgrade == 3)
+            {
+                FireProjectile(1);
+            }
         }
     }
 
-    void FireProjectile()
+    void FireProjectile(int mode)
     {
-        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //mousePos.z = 0;
-        //
-        //Vector3 direction = (mousePos - transform.position).normalized;
-        //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float facingDirection = Mathf.Sign(player.transform.localScale.x);
+        Vector3 baseDirection = new(facingDirection, 0f, 0f);
+        float spreadAngle = 10f * Mathf.Deg2Rad; // Convert degrees to radians
 
-        // Set the projectile direction to move horizontally
-        float facingDirection = Mathf.Sign(playerTransform.localScale.x);
-        Vector3 direction = new(facingDirection, 0f, 0f);
+        int bulletsFired = 0; // Track how many bullets we fire
 
         for (int i = 0; i < amoSize; i++)
         {
-            BulletScript projectileScript = projectiles[i].GetComponent<BulletScript>();
-            if (projectileScript.available)
+            BulletScript bulletscript = bullets[i].GetComponent<BulletScript>();
+            if (bulletscript.available)
             {
-                projectiles[i].SetActive(true);
-                projectiles[i].transform.position = firePoint.position;
-                projectileScript.Launch(direction);
-                break;
+                bullets[i].SetActive(true);
+                bullets[i].transform.position = firePoint.position;
+
+                // Determine bullet direction
+                Vector3 direction = baseDirection;
+                if (mode == 1) // Spread Shot
+                {
+                    if (bulletsFired == 1) // Upper bullet
+                        direction = new Vector3(Mathf.Cos(spreadAngle) * facingDirection, Mathf.Sin(spreadAngle), 0f);
+                    else if (bulletsFired == 2) // Lower bullet
+                        direction = new Vector3(Mathf.Cos(-spreadAngle) * facingDirection, Mathf.Sin(-spreadAngle), 0f);
+                }
+
+                bulletscript.Launch(direction);
+                bulletsFired++;
+
+                if ((mode == 0 && bulletsFired >= 1) || (mode == 1 && bulletsFired >= 3))
+                    break;
             }
         }
     }

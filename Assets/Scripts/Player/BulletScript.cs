@@ -4,6 +4,8 @@ public class BulletScript : MonoBehaviour
 {
     private float speed = 10f;
     private Vector3 moveDirection;
+    public float baseDamage = 10f;
+    public float currentDamage = 10f;
     public bool available;
 
     public void Start()
@@ -17,10 +19,11 @@ public class BulletScript : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0) return;
+
         if (available) return;
         transform.position += speed * Time.deltaTime * moveDirection;
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -28,6 +31,7 @@ public class BulletScript : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
     void OnBecameInvisible()
     {
         gameObject.SetActive(false);
