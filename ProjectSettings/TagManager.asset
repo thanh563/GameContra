@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Upgrade
   - Bullet
+  - Heal
+  - Drone
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Player
   - Enemy
   - Bullet
-  - 
+  - Drone
   - 
   - 
   - 
