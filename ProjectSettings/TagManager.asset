@@ -11,6 +11,11 @@ TagManager:
   - Heal
   - Drone
   - PlayerDrone
+  - Forground
+  - Coin
+  - Enemy
+  - Explosion
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
@@ -62,6 +67,15 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 2822998747
+    locked: 0
+  - name: Item
+    uniqueID: 3295836819
+    locked: 0
+  - name: Enemy
+    uniqueID: 3403316413
+    locked: 0
+  - name: HpBar
+    uniqueID: 2034608685
     locked: 0
   m_RenderingLayers:
   - Default
