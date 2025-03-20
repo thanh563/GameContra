@@ -1,49 +1,49 @@
 fileFormatVersion: 2
-guid: 344362f6e9c305848a9f54946e6ad766
+guid: 620e2a7b3e0f67f42b193712326764a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4874278423985981231
-    second: Terrain (16x16)_0
+      213: 138014504869316818
+    second: RPGmob_0
   - first:
-      213: 2492004042214043949
-    second: Terrain (16x16)_1
+      213: 6634924903095304434
+    second: RPGmob_1
   - first:
-      213: 8471289998749917440
-    second: Terrain (16x16)_2
+      213: 4884091822578311982
+    second: RPGmob_2
   - first:
-      213: 397718093594370940
-    second: Terrain (16x16)_3
+      213: 1234435196550272739
+    second: RPGmob_3
   - first:
-      213: 4716054802376701170
-    second: Terrain (16x16)_4
+      213: -1754826463896170894
+    second: RPGmob_4
   - first:
-      213: -8620202154233844528
-    second: Terrain (16x16)_5
+      213: -2132984671539142983
+    second: RPGmob_5
   - first:
-      213: -7517053698926566003
-    second: Terrain (16x16)_6
+      213: 1346820420278106568
+    second: RPGmob_6
   - first:
-      213: 3020870990670601969
-    second: Terrain (16x16)_7
+      213: -3588274832424327461
+    second: RPGmob_7
   - first:
-      213: 1685935324672158413
-    second: Terrain (16x16)_8
+      213: -8481699272811782761
+    second: RPGmob_8
   - first:
-      213: 8022139226935704013
-    second: Terrain (16x16)_9
+      213: -5957334603213865763
+    second: RPGmob_9
   - first:
-      213: 5587568460378422633
-    second: Terrain (16x16)_10
+      213: 7928206991157871821
+    second: RPGmob_10
   - first:
-      213: 4987498479824627636
-    second: Terrain (16x16)_11
+      213: 6067200819182439346
+    second: RPGmob_11
   - first:
-      213: 6480251376165907240
-    second: Terrain (16x16)_12
+      213: 5649131076659550760
+    second: RPGmob_12
   - first:
-      213: -8795747966950415410
-    second: Terrain (16x16)_13
+      213: 2150288482398314222
+    second: RPGmob_13
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,7 +76,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +90,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,313 +135,326 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Terrain (16x16)_0
+      name: RPGmob_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 80
-        height: 48
+        x: 11
+        y: 0
+        width: 22
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d8f6f139951b5cb0800000000000000
-      internalID: -4874278423985981231
+      spriteID: 2d8469006735ae100800000000000000
+      internalID: 138014504869316818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_1
+      name: RPGmob_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
-        width: 80
-        height: 48
+        x: 52
+        y: 0
+        width: 35
+        height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2171032970659220800000000000000
-      internalID: 2492004042214043949
+      spriteID: 2f08368cb0df31c50800000000000000
+      internalID: 6634924903095304434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_2
+      name: RPGmob_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 67
+        y: 34
+        width: 8
+        height: 7
+      alignment: 9
+      pivot: {x: 0.45131874, y: 0.54636544}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 001eeccfe51109570800000000000000
-      internalID: 8471289998749917440
+      spriteID: e23ab27b2a7c7c340800000000000000
+      internalID: 4884091822578311982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_3
+      name: RPGmob_3
       rect:
         serializedVersion: 2
-        x: 272
-        y: 171
-        width: 48
+        x: 95
+        y: 0
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e65e9c5548912110800000000000000
+      internalID: 1234435196550272739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 31
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e8309e0aa95a7e0800000000000000
+      internalID: -1754826463896170894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_5
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 36
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be5e850ebd1662e0800000000000000
+      internalID: -2132984671539142983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_6
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 34
+        width: 10
+        height: 8
+      alignment: 9
+      pivot: {x: -0.34403077, y: 2.4883423}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c93be6590ed0b210800000000000000
+      internalID: 1346820420278106568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_7
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 36
+        width: 7
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5463758, y: 3.583959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6afd82d03e33ec0800000000000000
+      internalID: -3588274832424327461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_8
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d5d580373fa4a80800000000000000
+      internalID: -8481699272811782761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_9
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 0
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc7b4fddbb435da0800000000000000
+      internalID: -5957334603213865763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_10
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4cbb5c046a60e60800000000000000
+      internalID: 7928206991157871821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_11
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 0
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb0458eff6033450800000000000000
+      internalID: 6067200819182439346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_12
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 0
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a99e9a8ceb56e40800000000000000
+      internalID: 5649131076659550760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPGmob_13
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 0
+        width: 34
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c732079bf7af48500800000000000000
-      internalID: 397718093594370940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_4
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 155
-        width: 48
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f430f42bdac27140800000000000000
-      internalID: 4716054802376701170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_5
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 139
-        width: 48
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0dca5d000d3ee5880800000000000000
-      internalID: -8620202154233844528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d8522f5ec7f0ea790800000000000000
-      internalID: -7517053698926566003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fe1437292a4ce920800000000000000
-      internalID: 3020870990670601969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_8
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dcaed5dce35a56710800000000000000
-      internalID: 1685935324672158413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_9
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 64
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dc9ba30bf1d545f60800000000000000
-      internalID: 8022139226935704013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96d380719e70b8d40800000000000000
-      internalID: 5587568460378422633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b76fb74177273540800000000000000
-      internalID: 4987498479824627636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_12
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82bea93fa4a7ee950800000000000000
-      internalID: 6480251376165907240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_13
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 0
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec36e0073d93fe580800000000000000
-      internalID: -8795747966950415410
+      spriteID: eee17f56bfb57dd10800000000000000
+      internalID: 2150288482398314222
       vertices: []
       indices: 
       edges: []
@@ -450,7 +463,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f3cfb1deaad8a4b49a41632f02c47210
+    spriteID: ed7449b33f9e52d4ca04911bb7df6928
     internalID: 0
     vertices: []
     indices: 
@@ -460,20 +473,20 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Terrain (16x16)_0: -4874278423985981231
-      Terrain (16x16)_1: 2492004042214043949
-      Terrain (16x16)_10: 5587568460378422633
-      Terrain (16x16)_11: 4987498479824627636
-      Terrain (16x16)_12: 6480251376165907240
-      Terrain (16x16)_13: -8795747966950415410
-      Terrain (16x16)_2: 8471289998749917440
-      Terrain (16x16)_3: 397718093594370940
-      Terrain (16x16)_4: 4716054802376701170
-      Terrain (16x16)_5: -8620202154233844528
-      Terrain (16x16)_6: -7517053698926566003
-      Terrain (16x16)_7: 3020870990670601969
-      Terrain (16x16)_8: 1685935324672158413
-      Terrain (16x16)_9: 8022139226935704013
+      RPGmob_0: 138014504869316818
+      RPGmob_1: 6634924903095304434
+      RPGmob_10: 7928206991157871821
+      RPGmob_11: 6067200819182439346
+      RPGmob_12: 5649131076659550760
+      RPGmob_13: 2150288482398314222
+      RPGmob_2: 4884091822578311982
+      RPGmob_3: 1234435196550272739
+      RPGmob_4: -1754826463896170894
+      RPGmob_5: -2132984671539142983
+      RPGmob_6: 1346820420278106568
+      RPGmob_7: -3588274832424327461
+      RPGmob_8: -8481699272811782761
+      RPGmob_9: -5957334603213865763
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
