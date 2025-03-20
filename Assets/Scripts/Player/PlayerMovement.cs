@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         // Flip sprite
         if (moveInput != 0)
         {
-            transform.localScale = new Vector3(Mathf.Sign(moveInput), 1f, 1f);
+            transform.localScale = new Vector3(Mathf.Sign(moveInput), 1f, 1f) * 3.5f;
         }
 
         // Ground Check

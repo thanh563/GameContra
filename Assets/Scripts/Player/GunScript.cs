@@ -13,7 +13,11 @@ public class GunScript : MonoBehaviour
     private GameObject player;
 
     private List<GameObject> bullets;
-    private readonly int amoSize = 15;
+
+    [SerializeField]
+    private readonly int amoSize = 5;
+
+    private bool isMainWeapon = true;
 
     public int currentUpgrade = 0;
     private void Start()
@@ -41,7 +45,12 @@ public class GunScript : MonoBehaviour
     {
         if (Time.timeScale == 0) return;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
+        {
+            SwitchWeapon();
+        }
+
+        if (Input.GetMouseButtonDown(0) && isMainWeapon)
         {
             if (currentUpgrade == 0 || currentUpgrade == 1)
             {
@@ -87,5 +96,10 @@ public class GunScript : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private void SwitchWeapon()
+    {
+        isMainWeapon = !isMainWeapon;
     }
 }

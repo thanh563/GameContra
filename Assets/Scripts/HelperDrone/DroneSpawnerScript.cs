@@ -3,16 +3,12 @@ using UnityEngine;
 
 public class DroneSpawnerScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject dronePrefab;
-    [SerializeField]
-    private float spawnInterval = 5f;
-    [SerializeField]
-    private int spawnSize = 2;
-    [SerializeField]
-    private GameObject player;
+    [SerializeField] private GameObject dronePrefab;
+    [SerializeField] private float spawnInterval = 5f;
+    [SerializeField] private int spawnSize = 2;
 
     private List<GameObject> drones;
+
     void Start()
     {
         drones = new List<GameObject>();
@@ -20,6 +16,7 @@ public class DroneSpawnerScript : MonoBehaviour
         {
             GameObject drone = Instantiate(dronePrefab);
             drones.Add(drone);
+            drone.SetActive(false); // Ensure they are disabled initially
         }
 
         InvokeRepeating(nameof(SpawnEnemy), 0, spawnInterval);
@@ -27,17 +24,20 @@ public class DroneSpawnerScript : MonoBehaviour
 
     void SpawnEnemy()
     {
-        for (int i = 0; i < spawnSize; i++)
+        foreach (var drone in drones)
         {
-            HelperDroneScript droneScript = drones[i].GetComponent<HelperDroneScript>();
+            HelperDroneScript droneScript = drone.GetComponent<HelperDroneScript>();
 
             if (droneScript.available)
             {
                 bool spawnLeft = Random.value > 0.5f;
-                drones[i].transform.position = GetRandomSpawnPosition(spawnLeft);
-                droneScript.movingRight = !spawnLeft; // Opposite direction
-                drones[i].SetActive(true);
-                break;
+                Vector3 spawnPos = GetRandomSpawnPosition(spawnLeft);
+
+                drone.transform.position = spawnPos;
+                droneScript.movingRight = spawnLeft; // Move opposite to spawn side
+
+                drone.SetActive(true);
+                return;
             }
         }
     }
@@ -45,17 +45,17 @@ public class DroneSpawnerScript : MonoBehaviour
     Vector3 GetRandomSpawnPosition(bool spawnLeft)
     {
         Camera cam = Camera.main;
+        if (cam == null) return Vector3.zero; // Safety check
+
         float height = cam.orthographicSize;
         float width = height * cam.aspect;
 
-        // Spawn position relative to the player's x-position
-        float xPos = spawnLeft ? player.transform.position.x - width - 1f : player.transform.position.x + width + 1f;
+        // Get the actual camera position (since Cinemachine might move it dynamically)
+        Vector3 camPos = cam.transform.position;
 
-        // Keep it in the upper half of the screen relative to the player's y-position
-        float yPos = player.transform.position.y + Random.Range(1, height - 4f);
+        float xPos = spawnLeft ? camPos.x - width - 1f : camPos.x + width + 1f;
+        float yPos = camPos.y + Random.Range(1, height - 4f);
 
         return new Vector3(xPos, yPos, 0f);
     }
-
-
 }

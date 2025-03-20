@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - Heal
   - Drone
+  - PlayerDrone
   layers:
   - Default
   - TransparentFX

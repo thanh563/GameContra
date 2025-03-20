@@ -8,13 +8,13 @@ public class HelperDroneScript : MonoBehaviour
     [SerializeField] private float offScreenDuration = 3f; // Time before deactivating
 
     public bool movingRight;
-    private LootItemsScript lootScript;
+    private DropItemScript lootScript;
     private float offScreenTimer = 0f;
     private bool isOffScreen = false;
 
     void Start()
     {
-        lootScript = GetComponent<LootItemsScript>();
+        lootScript = GetComponent<DropItemScript>();
         gameObject.SetActive(false);
     }
 
@@ -24,14 +24,14 @@ public class HelperDroneScript : MonoBehaviour
         float move = speed * Time.deltaTime * (movingRight ? 1 : -1);
         transform.Translate(move, 0, 0);
 
-        CheckOffScreen();
+        CheckOffScreen(); // Ensure drones deactivate when off-screen
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            lootScript.DropAllLoot();
+            lootScript.DropItem();
             gameObject.SetActive(false);
         }
     }
@@ -70,6 +70,5 @@ public class HelperDroneScript : MonoBehaviour
     private void OnEnable()
     {
         available = false;
-        movingRight = Random.value > 0.5f;
     }
 }
