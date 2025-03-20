@@ -1,49 +1,46 @@
 fileFormatVersion: 2
-guid: 344362f6e9c305848a9f54946e6ad766
+guid: 05ac12ed2fede0347b135d2d62a53cf5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4874278423985981231
-    second: Terrain (16x16)_0
+      213: 6268267066792955773
+    second: SniperMob_0
   - first:
-      213: 2492004042214043949
-    second: Terrain (16x16)_1
+      213: 6406095031566502068
+    second: SniperMob_1
   - first:
-      213: 8471289998749917440
-    second: Terrain (16x16)_2
+      213: 4541346877595976489
+    second: SniperMob_2
   - first:
-      213: 397718093594370940
-    second: Terrain (16x16)_3
+      213: 1675274897132513851
+    second: SniperMob_3
   - first:
-      213: 4716054802376701170
-    second: Terrain (16x16)_4
+      213: 8386758856465076108
+    second: SniperMob_4
   - first:
-      213: -8620202154233844528
-    second: Terrain (16x16)_5
+      213: -6045563150467807302
+    second: SniperMob_5
   - first:
-      213: -7517053698926566003
-    second: Terrain (16x16)_6
+      213: -6219262175136223191
+    second: SniperMob_6
   - first:
-      213: 3020870990670601969
-    second: Terrain (16x16)_7
+      213: -8822599516760618454
+    second: SniperMob_7
   - first:
-      213: 1685935324672158413
-    second: Terrain (16x16)_8
+      213: 6486255990860534556
+    second: SniperMob_8
   - first:
-      213: 8022139226935704013
-    second: Terrain (16x16)_9
+      213: -531872832337728490
+    second: SniperMob_9
   - first:
-      213: 5587568460378422633
-    second: Terrain (16x16)_10
+      213: 4219841567361035437
+    second: SniperMob_10
   - first:
-      213: 4987498479824627636
-    second: Terrain (16x16)_11
+      213: -7030450030110970056
+    second: SniperMob_11
   - first:
-      213: 6480251376165907240
-    second: Terrain (16x16)_12
-  - first:
-      213: -8795747966950415410
-    second: Terrain (16x16)_13
+      213: -6933717660877157398
+    second: SniperMob_12
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -76,7 +73,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -90,7 +87,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,82 +132,315 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Terrain (16x16)_0
+      name: SniperMob_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
-        width: 80
-        height: 48
+        x: 9
+        y: 0
+        width: 31
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1d8f6f139951b5cb0800000000000000
-      internalID: -4874278423985981231
+      spriteID: d7f4971cfab5df650800000000000000
+      internalID: 6268267066792955773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_1
+      name: SniperMob_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
-        width: 80
-        height: 48
+        x: 52
+        y: 0
+        width: 37
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d2171032970659220800000000000000
-      internalID: 2492004042214043949
+      spriteID: 4b88ae18d7507e850800000000000000
+      internalID: 6406095031566502068
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_2
+      name: SniperMob_2
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
-        width: 64
-        height: 48
+        x: 97
+        y: 0
+        width: 36
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 001eeccfe51109570800000000000000
-      internalID: 8471289998749917440
+      spriteID: 92300f09cea160f30800000000000000
+      internalID: 4541346877595976489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_3
+      name: SniperMob_3
       rect:
         serializedVersion: 2
-        x: 272
-        y: 171
-        width: 48
+        x: 141
+        y: 0
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a66b894a5cf3710800000000000000
+      internalID: 1675274897132513851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_4
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 0
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f4678beb0c36470800000000000000
+      internalID: 8386758856465076108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_5
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 0
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7cc2d6858d91ca0800000000000000
+      internalID: -6045563150467807302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_6
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9207bf5b00eb0b9a0800000000000000
+      internalID: -6219262175136223191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_7
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 0
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a43ffcb74df8580800000000000000
+      internalID: -8822599516760618454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_8
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 0
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13dd71457fc30a50800000000000000
+      internalID: 6486255990860534556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_9
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 0
+        width: 29
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c24da1a786e98f0800000000000000
+      internalID: -531872832337728490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_10
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 0
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac6bfe3c83ef8a30800000000000000
+      internalID: 4219841567361035437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_11
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 0
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fe91052f2de6e90800000000000000
+      internalID: -7030450030110970056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_12
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 0
+        width: 36
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeb809a168c76cf90800000000000000
+      internalID: -6933717660877157398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperMob_13
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 18
+        width: 7
         height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -218,230 +448,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c732079bf7af48500800000000000000
-      internalID: 397718093594370940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_4
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 155
-        width: 48
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2f430f42bdac27140800000000000000
-      internalID: 4716054802376701170
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_5
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 139
-        width: 48
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0dca5d000d3ee5880800000000000000
-      internalID: -8620202154233844528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d8522f5ec7f0ea790800000000000000
-      internalID: -7517053698926566003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1fe1437292a4ce920800000000000000
-      internalID: 3020870990670601969
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_8
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dcaed5dce35a56710800000000000000
-      internalID: 1685935324672158413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_9
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 64
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dc9ba30bf1d545f60800000000000000
-      internalID: 8022139226935704013
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96d380719e70b8d40800000000000000
-      internalID: 5587568460378422633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4b76fb74177273540800000000000000
-      internalID: 4987498479824627636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_12
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82bea93fa4a7ee950800000000000000
-      internalID: 6480251376165907240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Terrain (16x16)_13
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 0
-        width: 64
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec36e0073d93fe580800000000000000
-      internalID: -8795747966950415410
+      spriteID: f5cfe8d190dd9bb439d0ce1df05ef5ae
+      internalID: 410512514
       vertices: []
       indices: 
       edges: []
@@ -450,7 +460,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f3cfb1deaad8a4b49a41632f02c47210
+    spriteID: aec93ac2a919b41428cc986a219120ed
     internalID: 0
     vertices: []
     indices: 
@@ -460,20 +470,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Terrain (16x16)_0: -4874278423985981231
-      Terrain (16x16)_1: 2492004042214043949
-      Terrain (16x16)_10: 5587568460378422633
-      Terrain (16x16)_11: 4987498479824627636
-      Terrain (16x16)_12: 6480251376165907240
-      Terrain (16x16)_13: -8795747966950415410
-      Terrain (16x16)_2: 8471289998749917440
-      Terrain (16x16)_3: 397718093594370940
-      Terrain (16x16)_4: 4716054802376701170
-      Terrain (16x16)_5: -8620202154233844528
-      Terrain (16x16)_6: -7517053698926566003
-      Terrain (16x16)_7: 3020870990670601969
-      Terrain (16x16)_8: 1685935324672158413
-      Terrain (16x16)_9: 8022139226935704013
+      SniperMob_13: 410512514
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
