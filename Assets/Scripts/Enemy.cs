@@ -3,95 +3,116 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private float spped = 2f;
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private GameObject target;
     [SerializeField] private float distance = 5f;
     private Vector3 startPos;
     private bool movingRight = true;
-	//Shooting
-	public bool isShootable = false;
-	public GameObject bullet;
-    public float buttletSpeed;
-    public float timeBtwFire;// bnh giây bắn 1 lần
-    public float fireCooldown;
-    //Health
-    [SerializeField]protected float maxHp=50f;
-	protected float currentHealth;
+
+    // Shooting
+    public float damage = 20f;
+    public bool isShootable = false;
+    public GameObject bullet;
+    public float bulletSpeed;
+    public float timeBtwFire;
+    private float fireCooldown;
+
+    // Health
+    [SerializeField] private float maxHp = 50f;
+    private float currentHealth;
     [SerializeField] private Image hpBar;
 
-
-	// Start is called once before the first execution of Update after the MonoBehaviour is created
-	void Start()
+    void Start()
     {
         startPos = transform.position;
-		UpdateHpBar();
-		currentHealth = maxHp;
-	}
+        currentHealth = maxHp; // Set HP first
+        UpdateHpBar(); // Then update HP bar
+    }
 
-    // Update is called once per frame
     void Update()
     {
         float leftBound = startPos.x - distance;
         float rightBound = startPos.x + distance;
+
         if (movingRight)
         {
-            transform.Translate(Vector2.right * spped * Time.deltaTime);
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
             if (transform.position.x >= rightBound)
             {
                 movingRight = false;
-				Flip();
-			}
+                Flip();
+            }
         }
         else
         {
-            transform.Translate(Vector2.left * spped * Time.deltaTime);
+            transform.Translate(Vector2.left * speed * Time.deltaTime);
             if (transform.position.x <= leftBound)
             {
                 movingRight = true;
                 Flip();
             }
         }
-		fireCooldown -= Time.deltaTime;
-        if(fireCooldown < 0)
+
+        fireCooldown -= Time.deltaTime;
+        if (fireCooldown < 0 && isShootable)
         {
             fireCooldown = timeBtwFire;
-            //shoot
             EnemyFireBullet();
         }
-	}
+    }
+
     void EnemyFireBullet()
     {
-        var bulletTmp = Instantiate(bullet, transform.position, Quaternion.identity);
+        if (bullet == null) return; // Prevents errors
 
-		Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
-        Vector3 direction = GameObject.Find("Player").transform.position - transform.position;
-        rb.AddForce(direction.normalized * buttletSpeed, ForceMode2D.Impulse);
-	}
+        var bulletTmp = Instantiate(bullet, transform.position, Quaternion.identity);
+        Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
+
+        Vector3 direction = target.transform.position - transform.position;
+        direction.y = 0;
+        direction.Normalize();
+
+        rb.linearVelocity = direction * bulletSpeed; // Use correct property
+    }
+
     void Flip()
     {
         Vector3 scaler = transform.localScale;
         scaler.x *= -1;
         transform.localScale = scaler;
-	}
-    public void TakeDamage(float damage)
-	{
-		currentHealth -= damage;
-        currentHealth = Mathf.Max(currentHealth, 0);
-		hpBar.fillAmount = currentHealth / maxHp;
-        UpdateHpBar();
-		if (currentHealth <= 0)
-		{
-            Die();
-		}
-	}
-	public void Die()
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-		Destroy(gameObject);
-	}
-    protected void UpdateHpBar()
+        if (collision.gameObject.CompareTag("PlayerBullet"))
+        {
+            float dmg = collision.gameObject.GetComponent<BulletScript>().currentDamage;
+            TakeDamage(dmg);
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        currentHealth = Mathf.Max(currentHealth, 0);
+        UpdateHpBar();
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    private void UpdateHpBar()
     {
         if (hpBar != null)
         {
-			hpBar.fillAmount = currentHealth / maxHp;
-		}
+            hpBar.fillAmount = currentHealth / maxHp;
+        }
     }
 }

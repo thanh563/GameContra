@@ -26,7 +26,7 @@ public class DroneSpawnerScript : MonoBehaviour
     {
         foreach (var drone in drones)
         {
-            HelperDroneScript droneScript = drone.GetComponent<HelperDroneScript>();
+            LootDroneScript droneScript = drone.GetComponent<LootDroneScript>();
 
             if (droneScript.available)
             {
