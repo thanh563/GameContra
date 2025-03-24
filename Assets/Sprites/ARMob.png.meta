@@ -182,20 +182,20 @@ TextureImporter:
       name: ARMob_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 8
         y: 0
-        width: 22
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7b72b296817336990800000000000000
-      internalID: -7394005585229043785
+      spriteID: 405cc9e7a9b0d084799934f26cc180b2
+      internalID: 1148078091
       vertices: []
       indices: 
       edges: []
@@ -204,20 +204,20 @@ TextureImporter:
       name: ARMob_1
       rect:
         serializedVersion: 2
-        x: 39
+        x: 40
         y: 0
-        width: 22
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 91dc30afc25707f30800000000000000
-      internalID: 4571282457814617369
+      spriteID: 68136eb6e5c5bc941af70bf6e54e750f
+      internalID: -1764662813
       vertices: []
       indices: 
       edges: []
@@ -226,20 +226,20 @@ TextureImporter:
       name: ARMob_2
       rect:
         serializedVersion: 2
-        x: 71
+        x: 72
         y: 0
-        width: 22
-        height: 28
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 44eaf6f61fd4368d0800000000000000
-      internalID: -2854352039470715324
+      spriteID: 4faebdc3622f145449f916709fbd2119
+      internalID: -1033249393
       vertices: []
       indices: 
       edges: []
@@ -248,20 +248,20 @@ TextureImporter:
       name: ARMob_3
       rect:
         serializedVersion: 2
-        x: 102
+        x: 103
         y: 0
-        width: 26
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 24
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d32965d9a3f036e0800000000000000
-      internalID: -1859718735348554792
+      spriteID: 6f0bbf9ed25cc984eb2b285e56d1da13
+      internalID: 154231440
       vertices: []
       indices: 
       edges: []
@@ -270,20 +270,20 @@ TextureImporter:
       name: ARMob_4
       rect:
         serializedVersion: 2
-        x: 135
+        x: 136
         y: 0
-        width: 24
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4946e888270e6fe80800000000000000
-      internalID: -8145076093531036524
+      spriteID: 76e201b9dcea18c47889f6e76a5de178
+      internalID: -940379901
       vertices: []
       indices: 
       edges: []
@@ -292,20 +292,20 @@ TextureImporter:
       name: ARMob_5
       rect:
         serializedVersion: 2
-        x: 168
+        x: 169
         y: 0
-        width: 16
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 14
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a242d6af987d079e0800000000000000
-      internalID: -1625562477868800982
+      spriteID: d4c255c893179f542a2c08b4758f5a7a
+      internalID: 39739485
       vertices: []
       indices: 
       edges: []
@@ -314,20 +314,20 @@ TextureImporter:
       name: ARMob_6
       rect:
         serializedVersion: 2
-        x: 200
+        x: 201
         y: 0
-        width: 16
+        width: 14
         height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 02da23a5002334570800000000000000
-      internalID: 8449652302971841824
+      spriteID: e58c87135ae64cd438b163bfce2053a1
+      internalID: -1351935016
       vertices: []
       indices: 
       edges: []
@@ -336,20 +336,20 @@ TextureImporter:
       name: ARMob_7
       rect:
         serializedVersion: 2
-        x: 232
+        x: 233
         y: 0
-        width: 16
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 14
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3a1f19d89c3e8b7e0800000000000000
-      internalID: -1749398000430354013
+      spriteID: 22d50c5ac26c690438f9917838d0dff1
+      internalID: 698161530
       vertices: []
       indices: 
       edges: []
@@ -358,20 +358,20 @@ TextureImporter:
       name: ARMob_8
       rect:
         serializedVersion: 2
-        x: 264
+        x: 265
         y: 0
-        width: 16
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 14
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 63de5cea2541717c0800000000000000
-      internalID: -4100786590345466570
+      spriteID: 008edda549be5104eb68a5643f8aa283
+      internalID: 1622889217
       vertices: []
       indices: 
       edges: []
@@ -380,20 +380,20 @@ TextureImporter:
       name: ARMob_9
       rect:
         serializedVersion: 2
-        x: 296
+        x: 297
         y: 0
-        width: 16
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 14
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 85b927de9e14f5cd0800000000000000
-      internalID: -2567260789610996904
+      spriteID: cb3e732f855793f44a7e8489c3b10bf4
+      internalID: 368704476
       vertices: []
       indices: 
       edges: []
@@ -402,20 +402,20 @@ TextureImporter:
       name: ARMob_10
       rect:
         serializedVersion: 2
-        x: 328
+        x: 329
         y: 0
-        width: 16
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 14
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 05e0b1b77565839a0800000000000000
-      internalID: -6253153148876419504
+      spriteID: 821a5b238b4aab948aec4ed29deddfb4
+      internalID: -1509023839
       vertices: []
       indices: 
       edges: []
@@ -424,20 +424,20 @@ TextureImporter:
       name: ARMob_11
       rect:
         serializedVersion: 2
-        x: 356
+        x: 357
         y: 0
-        width: 25
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 23
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b4ace274b1f3704d0800000000000000
-      internalID: -3168494426440938933
+      spriteID: f3d3bd441f285d04aa530d7ea2dadbc1
+      internalID: -1629327846
       vertices: []
       indices: 
       edges: []
@@ -446,20 +446,20 @@ TextureImporter:
       name: ARMob_12
       rect:
         serializedVersion: 2
-        x: 389
+        x: 390
         y: 0
-        width: 24
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 22
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4dbd38501da8cb5a0800000000000000
-      internalID: -6504171131484513324
+      spriteID: 08747e1e35ae5ce44bc778eb1f9907d6
+      internalID: -112823082
       vertices: []
       indices: 
       edges: []
@@ -468,20 +468,20 @@ TextureImporter:
       name: ARMob_13
       rect:
         serializedVersion: 2
-        x: 423
+        x: 424
         y: 0
-        width: 22
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2ce7539abe8eca1e0800000000000000
-      internalID: -2185115620327719230
+      spriteID: 9917c1bc61ed82a4eb317db36cbc6a93
+      internalID: -1533881549
       vertices: []
       indices: 
       edges: []
@@ -490,20 +490,20 @@ TextureImporter:
       name: ARMob_14
       rect:
         serializedVersion: 2
-        x: 455
+        x: 456
         y: 0
-        width: 22
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5a38c5f20295cea40800000000000000
-      internalID: 5398788048078799781
+      spriteID: bc303051680bee647b09359baba5b3a1
+      internalID: -1228958432
       vertices: []
       indices: 
       edges: []
@@ -512,20 +512,20 @@ TextureImporter:
       name: ARMob_15
       rect:
         serializedVersion: 2
-        x: 487
+        x: 488
         y: 0
-        width: 22
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 03604edb4fa5a8f10800000000000000
-      internalID: 2272728969166194224
+      spriteID: 82b58d7d520eae143aaed72ff3ee52ef
+      internalID: 661464669
       vertices: []
       indices: 
       edges: []
@@ -534,20 +534,20 @@ TextureImporter:
       name: ARMob_16
       rect:
         serializedVersion: 2
-        x: 519
+        x: 520
         y: 0
-        width: 22
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9d15452c586d8ea80800000000000000
-      internalID: -8437258031899323943
+      spriteID: e741e4ef1585f364583b64d4f586cdad
+      internalID: -1903675863
       vertices: []
       indices: 
       edges: []
@@ -556,20 +556,20 @@ TextureImporter:
       name: ARMob_17
       rect:
         serializedVersion: 2
-        x: 551
+        x: 552
         y: 0
-        width: 22
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 23032124b7a4af0d0800000000000000
-      internalID: -3388313876392955854
+      spriteID: fcee50e46a10c4e429ffffc34c9b2c9c
+      internalID: -16034413
       vertices: []
       indices: 
       edges: []
@@ -578,20 +578,20 @@ TextureImporter:
       name: ARMob_18
       rect:
         serializedVersion: 2
-        x: 583
+        x: 584
         y: 0
-        width: 22
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 20
+        height: 29
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e52495b9ca00d2fe0800000000000000
-      internalID: -1212311983352102306
+      spriteID: ccef8748f335554498281eb478eee852
+      internalID: 1330689841
       vertices: []
       indices: 
       edges: []
@@ -600,20 +600,20 @@ TextureImporter:
       name: ARMob_19
       rect:
         serializedVersion: 2
-        x: 612
+        x: 613
         y: 0
-        width: 29
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 27
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 24d71c130070e21b0800000000000000
-      internalID: -5679594382651458238
+      spriteID: dfcc55169b238b54d91c254d65a5d53f
+      internalID: 794458639
       vertices: []
       indices: 
       edges: []
@@ -622,20 +622,20 @@ TextureImporter:
       name: ARMob_20
       rect:
         serializedVersion: 2
-        x: 639
+        x: 640
         y: 0
-        width: 28
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 26
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 32d949a62a3e54510800000000000000
-      internalID: 1532881534901853475
+      spriteID: 13f6415be3a49e0408a74c4204d3853c
+      internalID: -1456127109
       vertices: []
       indices: 
       edges: []
@@ -644,20 +644,20 @@ TextureImporter:
       name: ARMob_21
       rect:
         serializedVersion: 2
-        x: 671
+        x: 672
         y: 0
-        width: 32
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 30
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fae1cab2152ced0d0800000000000000
-      internalID: -3396063415109935441
+      spriteID: 75dd2d6f165e40e4f9bc2f32a241c40a
+      internalID: -60281261
       vertices: []
       indices: 
       edges: []
@@ -666,42 +666,20 @@ TextureImporter:
       name: ARMob_22
       rect:
         serializedVersion: 2
-        x: 703
+        x: 704
         y: 0
-        width: 36
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 50
+        height: 23
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a98c3379dba85ec80800000000000000
-      internalID: -8294070591842695014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ARMob_23
-      rect:
-        serializedVersion: 2
-        x: 751
-        y: 19
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 1, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05a8889dd8ffbdb488e0a608cc999ff0
-      internalID: -1947291023
+      spriteID: 5932d10a2f834b84aaaa35d089f17215
+      internalID: 484102097
       vertices: []
       indices: 
       edges: []
@@ -720,7 +698,29 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ARMob_23: -1947291023
+      ARMob_0: 1148078091
+      ARMob_1: -1764662813
+      ARMob_10: -1509023839
+      ARMob_11: -1629327846
+      ARMob_12: -112823082
+      ARMob_13: -1533881549
+      ARMob_14: -1228958432
+      ARMob_15: 661464669
+      ARMob_16: -1903675863
+      ARMob_17: -16034413
+      ARMob_18: 1330689841
+      ARMob_19: 794458639
+      ARMob_2: -1033249393
+      ARMob_20: -1456127109
+      ARMob_21: -60281261
+      ARMob_22: 484102097
+      ARMob_3: 154231440
+      ARMob_4: -940379901
+      ARMob_5: 39739485
+      ARMob_6: -1351935016
+      ARMob_7: 698161530
+      ARMob_8: 1622889217
+      ARMob_9: 368704476
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

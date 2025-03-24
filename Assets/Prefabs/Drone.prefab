@@ -194,6 +194,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - item: {fileID: 4081430026097872178, guid: d75d67932c3d50a46bd6a4b7eddefc59, type: 3}
-    chance: 1
+    chance: 0.3
   - item: {fileID: 2550874483593248237, guid: 68fd0b6366a0c4948ab51fc4897b2b13, type: 3}
-    chance: 1
+    chance: 0.1

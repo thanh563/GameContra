@@ -64,15 +64,15 @@ public class Enemy : MonoBehaviour
     void EnemyFireBullet()
     {
         if (bullet == null) return; // Prevents errors
-
+        if (target == null) return;
         var bulletTmp = Instantiate(bullet, transform.position, Quaternion.identity);
-        Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
+        EnemyBulletScript enemyBulletScript = bulletTmp.GetComponent<EnemyBulletScript>();
 
         Vector3 direction = target.transform.position - transform.position;
         direction.y = 0;
         direction.Normalize();
 
-        rb.linearVelocity = direction * bulletSpeed; // Use correct property
+        enemyBulletScript.direction = direction;
     }
 
     void Flip()
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
     {
         currentHealth -= damage;
         currentHealth = Mathf.Max(currentHealth, 0);
-        UpdateHpBar();
+        if (hpBar != null) UpdateHpBar();
 
         if (currentHealth <= 0)
         {
