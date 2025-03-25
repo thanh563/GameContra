@@ -16,6 +16,10 @@ TagManager:
   - Explosion
   - PlayerBullet
   - MetalGround
+  - MoveSpeedUpgrade
+  - ShieldUpgrade
+  - AirGunUpgrade
+  - Shield
   layers:
   - Default
   - TransparentFX

@@ -3,6 +3,7 @@ using UnityEngine;
 public class DroneScript : MonoBehaviour
 {
     [SerializeField] private GameObject player;
+    [SerializeField] private GameObject gameController;
     private Vector3 targetOffset;
     private bool isMainWeapon = false;
     private float switchThreshold = 0.5f; // Distance before the drone starts following
@@ -38,6 +39,9 @@ public class DroneScript : MonoBehaviour
         // Weapon switching
         if (Input.GetMouseButtonDown(1))
         {
+            int weapon = isMainWeapon ? 2 : 1;
+            GameControllerScript gameControllerScript = gameController.GetComponent<GameControllerScript>();
+            gameControllerScript.SwitchWeapon(weapon);
             SwitchWeapon();
         }
 

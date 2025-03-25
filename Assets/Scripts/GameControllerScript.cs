@@ -6,6 +6,27 @@ public class GameControllerScript : MonoBehaviour
     [SerializeField] private float timePlayed;
     [SerializeField] private Text timeText;
     [SerializeField] private bool isRunning = true;
+    [SerializeField] private Image weapon1Highlight;
+    [SerializeField] private Image weapon2Highlight;
+
+    private int selectedWeapon = 1; // Default to weapon 1
+
+    void Start()
+    {
+        UpdateWeaponUI();
+    }
+
+    public void SwitchWeapon(int weaponNumber)
+    {
+        selectedWeapon = weaponNumber;
+        UpdateWeaponUI();
+    }
+
+    void UpdateWeaponUI()
+    {
+        weapon1Highlight.gameObject.SetActive(selectedWeapon == 1);
+        weapon2Highlight.gameObject.SetActive(selectedWeapon == 2);
+    }
 
     void Update()
     {

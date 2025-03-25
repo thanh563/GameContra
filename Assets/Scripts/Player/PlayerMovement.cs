@@ -13,10 +13,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private Image hpFill;
     [SerializeField] private GameObject gun;
-    [SerializeField] private float crouchHeight; // Adjust for crouching
+    [SerializeField] private GameObject shield;
+    [SerializeField] private GameObject drone;
+    [SerializeField] private float crouchHeight;
+    [SerializeField] private Text moveSpeedUpgradeText;
+    [SerializeField] private Text shieldUpgradeText;
+    [SerializeField] private Text airGunUpgradeText;
     private Vector2 originalColliderSize;
     private Vector2 originalColliderOffset;
-    Vector3 gunPosition;
+    private Vector3 gunPosition;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -98,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
     {
         gunPosition = gun.transform.position;
 
+        ShieldScript shieldScript = shield.GetComponent<ShieldScript>();
         if (!isCrouching) // Crouching
         {
             animator.SetBool("IsCrouching", true);
@@ -105,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
             boxCollider.size = new Vector2(originalColliderSize.x, originalColliderSize.y * crouchHeight);
             boxCollider.offset = new Vector2(originalColliderOffset.x, originalColliderOffset.y - (originalColliderSize.y * (1 - crouchHeight) / 2));
             isCrouching = true;
+            shieldScript.available = true;
         }
         else // Stand up
         {
@@ -113,29 +120,70 @@ public class PlayerMovement : MonoBehaviour
             boxCollider.size = originalColliderSize;
             boxCollider.offset = originalColliderOffset;
             isCrouching = false;
+            shieldScript.available = false;
         }
     }
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Drone"))
+
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Got hit");
-            health -= 10;
-            hpFill.fillAmount = health / 100;
-            if (health <= 0)
+            float dmg = 20f;
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            if (enemy != null)
             {
-                // trigger death animation
-                animator.SetTrigger("Death");
-                this.enabled = false;
-                StartCoroutine(WaitForDeathAnimation());
+                dmg = enemy.damage;
             }
+            TakeDamage(dmg);    
+        }
+        //else if (collision.gameObject.CompareTag("EnemyBullet") && collision.gameObject != shield)
+        //{
+        //    float dmg = 20f;
+        //    EnemyBulletScript bullet = collision.gameObject.GetComponent<EnemyBulletScript>();
+        //    if (bullet != null)
+        //    {
+        //        dmg = bullet.currentDamage;
+        //    }
+        //    TakeDamage(dmg); // Adjust damage value as needed
+        //}
+        else if (collision.gameObject.CompareTag("Drone"))
+        {
+            TakeDamage(20);
         }
         else if (collision.gameObject.CompareTag("Heal"))
         {
             health += 10;
             hpFill.fillAmount = health / 100;
+        }
+        else if (collision.gameObject.CompareTag("MoveSpeedUpgrade"))
+        {
+            speed += 0.1f * speed;
+            moveSpeedUpgradeText.text = int.Parse(moveSpeedUpgradeText.text) + 1 + "";
+        }
+        else if (collision.gameObject.CompareTag("AirGunUpgrade"))
+        {
+            speed += 0.1f * speed;
+            airGunUpgradeText.text = int.Parse(airGunUpgradeText.text) + 1 + "";
+            drone.GetComponent<DroneGunScript>().upgrade = true;
+        }
+        else if (collision.gameObject.CompareTag("ShieldUpgrade"))
+        {
+            shieldUpgradeText.text = int.Parse(shieldUpgradeText.text) + 1 + "";
+        }
+    }
+
+    private void TakeDamage(float damage)
+    {
+        health -= 10;
+        hpFill.fillAmount = health / 100;
+        if (health <= 0)
+        {
+            // trigger death animation
+            animator.SetTrigger("Death");
+            this.enabled = false;
+            StartCoroutine(WaitForDeathAnimation());
         }
     }
 
