@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    private float speed = 10f;
+    public float speed = 10f;
     private Vector3 moveDirection;
     public float baseDamage = 10f;
     public float currentDamage = 10f;

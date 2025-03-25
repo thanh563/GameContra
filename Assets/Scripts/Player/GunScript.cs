@@ -25,8 +25,8 @@ public class GunScript : MonoBehaviour
         bullets = new List<GameObject>();
         for (int i = 0; i < amoSize; i++)
         {
-            GameObject projectile = Instantiate(bulletPrefab);
-            bullets.Add(projectile);
+            GameObject bullet = Instantiate(bulletPrefab);
+            bullets.Add(bullet);
         }
     }
 
@@ -36,6 +36,7 @@ public class GunScript : MonoBehaviour
         foreach (GameObject bullet in bullets)
         {
             bullet.GetComponent<BulletScript>().currentDamage += currentUpgrade * 10f;
+            bullet.GetComponent<BulletScript>().speed += 1f;
             bullet.transform.localScale += new Vector3(scale, scale, scale);
         }
         

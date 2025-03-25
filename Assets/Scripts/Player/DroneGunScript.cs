@@ -12,6 +12,8 @@ public class DroneGunScript : MonoBehaviour
     [SerializeField]
     private readonly int amoSize = 5;
 
+    public bool upgrade = false;
+    private int upgradeLevel = 1;
     private bool isMainWeapon = false;
 
     private List<GameObject> bullets;
@@ -28,7 +30,12 @@ public class DroneGunScript : MonoBehaviour
     void Update()
     {
         if (Time.timeScale == 0) return;
-
+        if (upgrade)
+        {
+            upgradeLevel++;
+            upgrade = false;
+            UpgradeGun();
+        }
         if (Input.GetMouseButtonDown(1)) {
             SwitchWeapon();
         }
@@ -38,7 +45,17 @@ public class DroneGunScript : MonoBehaviour
             Fire();
         }
     }
+    private void UpgradeGun()
+    {
+        float scale = upgradeLevel * 0.01f;
+        foreach (GameObject bullet in bullets)
+        {
+            bullet.GetComponent<BulletScript>().currentDamage += upgradeLevel * 10f;
+            bullet.GetComponent<BulletScript>().speed += 1f;
+            bullet.transform.localScale += new Vector3(scale, scale, scale);
+        }
 
+    }
 
 
     void Fire()
