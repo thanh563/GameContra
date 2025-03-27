@@ -9,6 +9,8 @@ public class BulletScript : MonoBehaviour
     public bool available;
     private float activeTime;
     public float lifetime = 3f;
+    public AudioSource aus; 
+    public AudioClip hitSound; 
 
     public void Start()
     {
@@ -39,6 +41,7 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Drone"))
         {
+
             gameObject.SetActive(false);
         }
     }
