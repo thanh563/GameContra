@@ -1,4 +1,5 @@
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameControllerScript : MonoBehaviour
@@ -8,12 +9,18 @@ public class GameControllerScript : MonoBehaviour
     [SerializeField] private bool isRunning = true;
     [SerializeField] private Image weapon1Highlight;
     [SerializeField] private Image weapon2Highlight;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private AudioClip gameOverSound; // Âm thanh khi game over
+    private AudioSource audioSource; // AudioSource để phát âm thanh
 
     private int selectedWeapon = 1; // Default to weapon 1
 
     void Start()
     {
         UpdateWeaponUI();
+        pauseMenu.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void SwitchWeapon(int weaponNumber)
@@ -41,7 +48,11 @@ public class GameControllerScript : MonoBehaviour
             timeText.text = string.Format("Time: {0:D2}:{1:D2}:{2:D2}", hours, minutes, seconds);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    PauseButtonHandler();
+        //}
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             PauseButtonHandler();
         }
@@ -55,19 +66,51 @@ public class GameControllerScript : MonoBehaviour
         }
         else
         {
-            RunGame();
+            ContinueGame();
         }
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         Time.timeScale = 0;
         isRunning = false;
+        pauseMenu.SetActive(true); 
     }
 
-    void RunGame()
+    public void ContinueGame()
     {
         Time.timeScale = 1;
         isRunning = true;
+        pauseMenu.SetActive(false); 
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1; 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); 
+    }
+
+    public void BackToMenu()
+    {
+        Time.timeScale = 1; 
+        SceneManager.LoadScene(1); 
+    }
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        isRunning = false;
+        gameOverScreen.SetActive(true);
+
+       
+        foreach (var audio in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
+        {
+            audio.Stop();
+        }
+
+        
+        if (gameOverSound != null)
+        {
+            audioSource.PlayOneShot(gameOverSound);
+        }
     }
 }
