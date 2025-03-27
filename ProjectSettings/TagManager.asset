@@ -36,6 +36,13 @@ TagManager:
   - Drone
   - Collectables
   - 
+  - Solid
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -81,6 +88,11 @@ TagManager:
     locked: 0
   - name: HpBar
     uniqueID: 2034608685
+  - name: Enemy
+    uniqueID: 4002236273
+    locked: 0
+  - name: Player
+    uniqueID: 1825893089
     locked: 0
   m_RenderingLayers:
   - Default
