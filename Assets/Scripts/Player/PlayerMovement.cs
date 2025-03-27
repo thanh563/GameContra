@@ -138,16 +138,16 @@ public class PlayerMovement : MonoBehaviour
             }
             TakeDamage(dmg);    
         }
-        //else if (collision.gameObject.CompareTag("EnemyBullet") && collision.gameObject != shield)
-        //{
-        //    float dmg = 20f;
-        //    EnemyBulletScript bullet = collision.gameObject.GetComponent<EnemyBulletScript>();
-        //    if (bullet != null)
-        //    {
-        //        dmg = bullet.currentDamage;
-        //    }
-        //    TakeDamage(dmg); // Adjust damage value as needed
-        //}
+        else if (collision.gameObject.CompareTag("EnemyDroneBullet"))
+        {
+            float dmg = 20f;
+            EnemyDroneBulletScript bullet = collision.gameObject.GetComponent<EnemyDroneBulletScript>();
+            if (bullet != null)
+            {
+                dmg = bullet.currentDamage;
+            }
+            TakeDamage(dmg); // Adjust damage value as needed
+        }
         else if (collision.gameObject.CompareTag("Drone"))
         {
             TakeDamage(20);
@@ -176,7 +176,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void TakeDamage(float damage)
     {
-        health -= 10;
+        health -= damage;
         hpFill.fillAmount = health / 100;
         if (health <= 0)
         {

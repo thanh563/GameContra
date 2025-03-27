@@ -54,7 +54,7 @@ public class DroneSpawnerScript : MonoBehaviour
         Vector3 camPos = cam.transform.position;
 
         float xPos = spawnLeft ? camPos.x - width - 1f : camPos.x + width + 1f;
-        float yPos = camPos.y + Random.Range(1, height - 4f);
+        float yPos = camPos.y + Random.Range(0f, height - 1.5f);
 
         return new Vector3(xPos, yPos, 0f);
     }

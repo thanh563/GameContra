@@ -20,6 +20,7 @@ TagManager:
   - ShieldUpgrade
   - AirGunUpgrade
   - Shield
+  - EnemyDroneBullet
   layers:
   - Default
   - TransparentFX
