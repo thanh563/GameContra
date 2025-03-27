@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool isCrouching = false;
 
+
+    public static int rapidsPicked = 0;
+    public static float projectileSpeedKoeff = 2;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

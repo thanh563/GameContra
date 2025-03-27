@@ -8,7 +8,7 @@ public class EnemyDeathEffect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        scale = Mathf.Clamp((int)(FindObjectOfType<EnemyRunner>().transform.position.x*10000 - transform.position.x * 10000), -1, 1);//thay PlayerController thanh EnemyRunner
+        scale = Mathf.Clamp((int)(FindObjectOfType<PlayerMovement>().transform.position.x*10000 - transform.position.x * 10000), -1, 1);//thay PlayerController thanh EnemyRunner
 		transform.localScale = new Vector3(scale, 1, 1);
         if(GetComponent<Rigidbody2D>() != null)
         {

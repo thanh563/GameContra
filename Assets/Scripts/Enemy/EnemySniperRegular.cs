@@ -16,7 +16,7 @@ public class EnemySniperRegular : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(FindObjectOfType<EnemyRunner>().transform.position.x < transform.position.x)//thay PlayerController thanh EnemyRunner
+        if(FindObjectOfType<PlayerMovement>().transform.position.x < transform.position.x)//thay PlayerController thanh EnemyRunner
 		{
             transform.localScale = new Vector3(-1,1,1);
         } else

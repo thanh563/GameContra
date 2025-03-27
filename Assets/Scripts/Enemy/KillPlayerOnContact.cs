@@ -10,8 +10,8 @@ public class KillPlayerOnContact : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            //if(KillRegardless) FindObjectOfType<PlayerController>().invincCounter = -1;
-            //FindObjectOfType<PlayerController>().Death();
+            //if(KillRegardless) FindObjectOfType<PlayerMovement>().invincCounter = -1;
+            //FindObjectOfType<PlayerMovement>().Death();
             if (killSelf) Destroy(gameObject);
         }
 

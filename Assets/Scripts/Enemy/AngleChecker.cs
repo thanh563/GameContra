@@ -5,14 +5,14 @@ using UnityEngine.XR;
 
 public class AngleChecker : MonoBehaviour {
 
-    private EnemyRunner player; //thay PlayerController thanh EnemyRunner
+    private PlayerMovement player; //thay PlayerController thanh EnemyRunner
 
 	private float angle;
     private Vector2 A, B, C;
 
     void Start()
     {
-        player = FindObjectOfType<EnemyRunner>(); //    thay PlayerController thanh EnemyRunner
+        player = FindObjectOfType<PlayerMovement>(); //    thay PlayerController thanh EnemyRunner
 
 	}
 

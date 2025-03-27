@@ -21,9 +21,6 @@ public class EnemyRunner : MonoBehaviour {
 
     bool isActive;
 
-	public static int rapidsPicked = 0;//delete
-	public static float projectileSpeedKoeff = 2;//delete
-
 	// Use this for initialization
 	void Start () {
         myBody = GetComponent<Rigidbody2D>();
@@ -38,10 +35,10 @@ public class EnemyRunner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (!isActive) return;
-        onGround = Physics2D.OverlapCircle(groundSensor.position, 0.1f, ground);    // На земле ли
-        cliffAhead = !Physics2D.OverlapCircle(cliffSensor.position, 0.1f, ground);  // есть ли впереди обрыв
+        onGround = Physics2D.OverlapCircle(groundSensor.position, 0.1f, ground); 
+        cliffAhead = !Physics2D.OverlapCircle(cliffSensor.position, 0.1f, ground);  
 
-        // Отреагировать на обрыв
+        
         if(onGround && cliffAhead && !reacted)
         {
             ReactToCliff(Random.Range(0,3));
@@ -51,23 +48,23 @@ public class EnemyRunner : MonoBehaviour {
             reacted = false;
         }
         
-        // Двигаться
+        
         myBody.linearVelocity = new Vector2(moveSpeed * transform.localScale.x, myBody.linearVelocity.y);
         myAnimator.SetBool("OnGround", onGround);
     }
 
-    // реакция на обрыв
+    
     void ReactToCliff(float r)
     {
-        if(r == 0)  // Прыгнуть
+        if(r == 0)  
         {
             myBody.linearVelocity = new Vector2(myBody.linearVelocity.x, jumpHeight);            
         }
-        if (r == 1) // Упасть
+        if (r == 1) 
         {
             myBody.linearVelocity = new Vector2(myBody.linearVelocity.x, jumpHeight/3);            
         }
-        if (r > 1)  // Развернуться
+        if (r > 1)  
         {
             myBody.linearVelocity = new Vector2(0, myBody.linearVelocity.y);
             transform.localScale = new Vector3(-transform.localScale.x, 1, 1);
