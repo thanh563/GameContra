@@ -20,6 +20,8 @@ public class GunScript : MonoBehaviour
     private bool isMainWeapon = true;
 
     public int currentUpgrade = 0;
+    public AudioSource aus;
+    public AudioClip AudioClip;
     private void Start()
     {
         bullets = new List<GameObject>();
@@ -66,6 +68,11 @@ public class GunScript : MonoBehaviour
 
     void FireProjectile(int mode)
     {
+        if (AudioClip != null && aus != null)
+        {
+            aus.PlayOneShot(AudioClip); 
+        }
+
         float facingDirection = Mathf.Sign(player.transform.localScale.x);
         Vector3 baseDirection = new(facingDirection, 0f, 0f);
         float spreadAngle = 10f * Mathf.Deg2Rad; // Convert degrees to radians

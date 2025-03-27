@@ -7,6 +7,8 @@ public class BulletScript : MonoBehaviour
     public float baseDamage = 10f;
     public float currentDamage = 10f;
     public bool available;
+    public AudioSource aus; 
+    public AudioClip hitSound; 
 
     public void Start()
     {
@@ -28,6 +30,7 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Drone"))
         {
+
             gameObject.SetActive(false);
         }
     }

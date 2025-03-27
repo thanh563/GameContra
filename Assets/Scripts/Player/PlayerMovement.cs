@@ -1,5 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -28,7 +29,8 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider;
     private bool isGrounded;
     private bool isCrouching = false;
-
+    [SerializeField] private AudioClip gameOverSound; 
+    private AudioSource playerAudioSource;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         originalColliderSize = boxCollider.size;
         originalColliderOffset = boxCollider.offset;
+        playerAudioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -176,20 +179,36 @@ public class PlayerMovement : MonoBehaviour
 
     private void TakeDamage(float damage)
     {
-        health -= 10;
+        health -= damage;
         hpFill.fillAmount = health / 100;
         if (health <= 0)
         {
-            // trigger death animation
+            // Kích hoạt animation chết
             animator.SetTrigger("Death");
             this.enabled = false;
-            StartCoroutine(WaitForDeathAnimation());
+
+            // Bắt đầu Coroutine để đợi animation chết
+            StartCoroutine(WaitForDeathAnimationAndLoadScene());
         }
     }
 
-    private IEnumerator WaitForDeathAnimation()
+    private IEnumerator WaitForDeathAnimationAndLoadScene()
     {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
-        Time.timeScale = 0;
+        AudioSource[] allAudioSources = FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            audioSource.Stop();
+        }
+
+        
+        if (gameOverSound != null && playerAudioSource != null)
+        {
+            playerAudioSource.PlayOneShot(gameOverSound);
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        
+        SceneManager.LoadScene(3); 
     }
 }

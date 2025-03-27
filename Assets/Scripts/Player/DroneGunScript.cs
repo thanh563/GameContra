@@ -17,6 +17,8 @@ public class DroneGunScript : MonoBehaviour
     private bool isMainWeapon = false;
 
     private List<GameObject> bullets;
+    public AudioSource aus;
+    public AudioClip AudioClip;
     private void Start()
     {
         bullets = new List<GameObject>();
@@ -60,6 +62,10 @@ public class DroneGunScript : MonoBehaviour
 
     void Fire()
     {
+        if (AudioClip != null && aus != null)
+        {
+            aus.PlayOneShot(AudioClip);
+        }
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
 
