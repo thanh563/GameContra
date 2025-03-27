@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6428781601964361014}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: cliffSensor
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3090668177408942684}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: groundSensor
   m_TagString: Untagged
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
@@ -79,9 +79,9 @@ GameObject:
   - component: {fileID: 4403534911589420302}
   - component: {fileID: 3158116193142001895}
   - component: {fileID: 2710191844036725087}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: EnemyRunner
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -292731023
-  m_SortingLayer: 2
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -1325660692555949653, guid: 3d0ff0ff313543249ba22a319581a1fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

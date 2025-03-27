@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 4684909672133768966}
   - component: {fileID: 7643183724314608742}
   - component: {fileID: 8687993362077126909}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: EnemySniper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -292731023
-  m_SortingLayer: 2
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 3810199616485272264, guid: 3d0ff0ff313543249ba22a319581a1fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -212,6 +212,10 @@ PrefabInstance:
     - target: {fileID: 1407269783019926673, guid: 6d226f8a4aab2a748be297d678ffe253, type: 3}
       propertyPath: m_Name
       value: Dulo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407269783019926673, guid: 6d226f8a4aab2a748be297d678ffe253, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8588309662180861485, guid: 6d226f8a4aab2a748be297d678ffe253, type: 3}
       propertyPath: m_LocalPosition.x
