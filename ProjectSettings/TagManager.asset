@@ -4,12 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Ground
-  - Forground
-  - Coin
   - Enemy
-  - Explosion
-  - PlayerBullet
   layers:
   - Default
   - TransparentFX
@@ -18,8 +13,8 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
+  - Solid
+  - Enemy
   - 
   - 
   - 
@@ -50,23 +45,11 @@ TagManager:
   - name: Background
     uniqueID: 3150092269
     locked: 0
-  - name: Ground
-    uniqueID: 3153482343
-    locked: 0
-  - name: Forground
-    uniqueID: 1759293185
+  - name: Enemy
+    uniqueID: 4002236273
     locked: 0
   - name: Player
-    uniqueID: 1003000861
-    locked: 0
-  - name: Item
-    uniqueID: 3295836819
-    locked: 0
-  - name: Enemy
-    uniqueID: 3403316413
-    locked: 0
-  - name: HpBar
-    uniqueID: 2034608685
+    uniqueID: 1825893089
     locked: 0
   m_RenderingLayers:
   - Default
