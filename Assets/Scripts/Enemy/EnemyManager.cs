@@ -15,14 +15,10 @@ public class EnemyManager : MonoBehaviour {
         invinsible = false;
         currentHealth = health;
 	}
-	
-    // Получить урон
-    public void TakeDamage()
-    {
-        if (invinsible) return;
 
-        health--;
-        if(health<=0)
+    private void Update()
+    {
+        if (health <= 0 || gameObject.transform.position.y < -10f)
         {
             Die();
         }
@@ -38,6 +34,11 @@ public class EnemyManager : MonoBehaviour {
         if (deathEffectSecond != null)
         {
             Instantiate(deathEffectSecond, transform.position, transform.rotation);
+        }
+        DropItemScript dropItemScript = gameObject.GetComponent<DropItemScript>();
+        if (dropItemScript != null)
+        {
+            dropItemScript.DropItem();
         }
         Destroy(gameObject);
     }

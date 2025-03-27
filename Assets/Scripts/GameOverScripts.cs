@@ -29,12 +29,12 @@ public class GameOverScripts : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("PlayerDev");
     }
 
     public void BackToMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MenuUI");
     }
 }

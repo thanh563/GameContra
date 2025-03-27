@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class EnemyDroneGunScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject target;
+    public GameObject target;
     [SerializeField]
     private GameObject bulletPrefab;
     public float fireInterval = 2f; // Fire every 2 seconds
@@ -20,14 +19,14 @@ public class EnemyDroneGunScript : MonoBehaviour
 
     void Shoot()
     {
-        if (bulletPrefab != null)
+        if (bulletPrefab != null && target != null)
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             
             if (bullet.TryGetComponent<EnemyDroneBulletScript>(out var bulletScript))
             {
                 Vector3 direction = (target.transform.position - transform.position).normalized;
-                bulletScript.SetDirection(direction);
+                bulletScript.SetDirection(new Vector3(direction.x, direction.y-1, direction.z));
             }
         }
     }

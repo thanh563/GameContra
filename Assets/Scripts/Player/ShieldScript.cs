@@ -53,8 +53,7 @@ public class ShieldScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            float dmg = enemy != null ? enemy.damage : 20; // Use ternary to check for enemy damage
+            float dmg = 20; // Use ternary to check for enemy damage
             TakeDamage(dmg);
         }
         // else if (collision.gameObject.CompareTag("EnemyBullet"))

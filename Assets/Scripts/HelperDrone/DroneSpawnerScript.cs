@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using NUnit.Framework.Internal;
 using UnityEngine;
 
 public class DroneSpawnerScript : MonoBehaviour
@@ -6,7 +7,7 @@ public class DroneSpawnerScript : MonoBehaviour
     [SerializeField] private GameObject dronePrefab;
     [SerializeField] private float spawnInterval = 5f;
     [SerializeField] private int spawnSize = 2;
-
+    [SerializeField] private GameObject target;
     private List<GameObject> drones;
 
     void Start()
@@ -30,12 +31,12 @@ public class DroneSpawnerScript : MonoBehaviour
 
             if (droneScript.available)
             {
-                bool spawnLeft = Random.value > 0.5f;
-                Vector3 spawnPos = GetRandomSpawnPosition(spawnLeft);
+                //bool spawnLeft = Random.value > 0.5f;
+                Vector3 spawnPos = GetSpawnPosition();
 
                 drone.transform.position = spawnPos;
-                droneScript.movingRight = spawnLeft; // Move opposite to spawn side
-
+                droneScript.movingRight = false; // Move opposite to spawn side
+                //drone.GetComponent<EnemyDroneGunScript>().target = target;
                 drone.SetActive(true);
                 return;
             }
@@ -57,5 +58,17 @@ public class DroneSpawnerScript : MonoBehaviour
         float yPos = camPos.y + Random.Range(0f, height - 1.5f);
 
         return new Vector3(xPos, yPos, 0f);
+    }
+
+    Vector3 GetSpawnPosition()
+    {
+        Camera cam = Camera.main;
+        float cameraRightEdge = cam.transform.position.x + cam.orthographicSize * cam.aspect;
+        float spawnX = Random.Range(cameraRightEdge + 5f, cameraRightEdge + 10f); // Random X outside camera
+        
+        Vector3 camPos = cam.transform.position;
+        float yPos = camPos.y + Random.Range(0f, cam.orthographicSize - 1.5f);
+
+        return new Vector3(spawnX, yPos, 0f);
     }
 }

@@ -39,10 +39,10 @@ public class DroneScript : MonoBehaviour
         // Weapon switching
         if (Input.GetMouseButtonDown(1))
         {
+            SwitchWeapon();
             int weapon = isMainWeapon ? 2 : 1;
             GameControllerScript gameControllerScript = gameController.GetComponent<GameControllerScript>();
             gameControllerScript.SwitchWeapon(weapon);
-            SwitchWeapon();
         }
 
         if (!isMainWeapon) return;

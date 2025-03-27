@@ -6,7 +6,7 @@ public class BossProjectile : MonoBehaviour
 {
     Rigidbody2D myRigidbody;
     public float movespeed;
-
+    public float lifeTime = 5f;
     // Use this for initialization
     void Start()
     {
@@ -14,11 +14,14 @@ public class BossProjectile : MonoBehaviour
         var speed = Random.Range(-4, 4) + movespeed;
 
         myRigidbody.AddRelativeForce(Vector2.left * (speed + PlayerMovement.rapidsPicked * PlayerMovement.projectileSpeedKoeff), ForceMode2D.Impulse);//playerControleer
+        Destroy(gameObject, lifeTime);
     }
 
-    void OnBecameInvisible()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
-        if (transform.parent != null) Destroy(transform.parent.gameObject);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

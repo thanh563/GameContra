@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 422120446800723610}
   - component: {fileID: 4112425341021428645}
   - component: {fileID: 8648303415668792086}
-  m_Layer: 0
+  - component: {fileID: 6123218228679842437}
+  - component: {fileID: -2734249055842841002}
+  - component: {fileID: 425026881610782343}
+  m_Layer: 9
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1796458374059249599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 7.14, z: 0}
+  m_LocalPosition: {x: 30.122217, y: 1.04, z: 0}
   m_LocalScale: {x: 0.29438892, y: 0.3194381, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -77,7 +80,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -292731023
+  m_SortingLayerID: 1948792957
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -659126035338323500, guid: 9a83ee74164ba9543a2c762e8dfd56d1, type: 3}
@@ -107,8 +110,80 @@ MonoBehaviour:
   RightCannon: {fileID: 4103185907912146724}
   Target: {fileID: 6951893372578228405}
   Projectile: {fileID: 3268855954566531299, guid: 624aee0f385e3764bb0788534a210822, type: 3}
-  ShotDelay: 2
+  ShotDelay: 3
   isActive: 0
+--- !u!114 &6123218228679842437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796458374059249599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829d75883b2a9004bb7c6c5df095efe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 500
+  invinsible: 0
+  deathEffectFirst: {fileID: 0}
+  deathEffectSecond: {fileID: 0}
+--- !u!114 &-2734249055842841002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796458374059249599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c82dd22b3f8950d4fb23c11a6b20bbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - item: {fileID: 4081430026097872178, guid: d75d67932c3d50a46bd6a4b7eddefc59, type: 3}
+    chance: 1
+  - item: {fileID: 4081430026097872178, guid: d75d67932c3d50a46bd6a4b7eddefc59, type: 3}
+    chance: 1
+  - item: {fileID: 4081430026097872178, guid: d75d67932c3d50a46bd6a4b7eddefc59, type: 3}
+    chance: 1
+  - item: {fileID: 4081430026097872178, guid: d75d67932c3d50a46bd6a4b7eddefc59, type: 3}
+    chance: 1
+  - item: {fileID: 4081430026097872178, guid: d75d67932c3d50a46bd6a4b7eddefc59, type: 3}
+    chance: 1
+  - item: {fileID: 4081430026097872178, guid: d75d67932c3d50a46bd6a4b7eddefc59, type: 3}
+    chance: 1
+  - item: {fileID: 2550874483593248237, guid: 68fd0b6366a0c4948ab51fc4897b2b13, type: 3}
+    chance: 1
+  - item: {fileID: 1517589923003581971, guid: 974e44604b32a2146a4dc7deb0a80eab, type: 3}
+    chance: 1
+--- !u!50 &425026881610782343
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796458374059249599}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4103185907912146724
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +196,7 @@ GameObject:
   - component: {fileID: 5956779863703157271}
   - component: {fileID: 6356697629267373572}
   - component: {fileID: 1079944645902799205}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DuloBoos2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,9 +337,9 @@ GameObject:
   - component: {fileID: 3112539795302456544}
   - component: {fileID: 565432467228006090}
   - component: {fileID: 7908307632166097071}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,11 +444,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.35041475, y: 1.1275439}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -383,7 +458,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.0001, y: 0.0001}
+  m_Size: {x: 3.3914928, y: 4.779308}
   m_EdgeRadius: 0
 --- !u!114 &7908307632166097071
 MonoBehaviour:
@@ -413,7 +488,7 @@ GameObject:
   - component: {fileID: 1409885316402782409}
   - component: {fileID: 2271932206268384552}
   - component: {fileID: 8662800044076247320}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DuloBoss1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

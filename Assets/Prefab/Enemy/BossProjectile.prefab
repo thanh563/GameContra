@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6486596582693344734}
   - component: {fileID: 1183537399328510986}
   - component: {fileID: 829641813416383390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BossProjectile
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 5
+  lifeTime: 5
 --- !u!212 &829641813416383390
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -292731023
-  m_SortingLayer: 2
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: -1032431291, guid: 87f0e253162bfd946a7721302e1b0e6f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

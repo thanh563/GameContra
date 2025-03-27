@@ -138,11 +138,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             float dmg = 20f;
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                dmg = enemy.damage;
-            }
             TakeDamage(dmg);    
         }
         else if (collision.gameObject.CompareTag("EnemyDroneBullet"))
@@ -213,6 +208,6 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         
-        SceneManager.LoadScene(3); 
+        SceneManager.LoadScene("GameOver"); 
     }
 }

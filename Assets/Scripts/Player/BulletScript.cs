@@ -39,9 +39,18 @@ public class BulletScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Drone"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-
+            EnemyManager enemyManager = collision.gameObject.GetComponent<EnemyManager>();
+            if (enemyManager != null)
+            {
+                enemyManager.health -= (int)currentDamage;
+            }
+            Debug.Log("Hit");
+            gameObject.SetActive(false);
+        }
+        else if (collision.gameObject.CompareTag("Drone"))
+        {
             gameObject.SetActive(false);
         }
     }

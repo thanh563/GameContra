@@ -52,7 +52,7 @@ public class DroneGunScript : MonoBehaviour
         float scale = upgradeLevel * 0.01f;
         foreach (GameObject bullet in bullets)
         {
-            bullet.GetComponent<BulletScript>().currentDamage += upgradeLevel * 10f;
+            bullet.GetComponent<BulletScript>().currentDamage += upgradeLevel * 0.1f;
             bullet.GetComponent<BulletScript>().speed += 1f;
             bullet.transform.localScale += new Vector3(scale, scale, scale);
         }

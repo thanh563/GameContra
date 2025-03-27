@@ -6,19 +6,19 @@ public class EnemyProjectile : MonoBehaviour {
 
     Rigidbody2D myRigidbody;
     public float movespeed;
-
+    public float lifeTime = 3f;
     // Use this for initialization
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myRigidbody.AddRelativeForce(Vector2.right * (movespeed + PlayerMovement.rapidsPicked * PlayerMovement.projectileSpeedKoeff), ForceMode2D.Impulse);
+        Destroy(gameObject, lifeTime);
     }
-
-    void OnBecameInvisible()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
-        if (transform.parent != null) Destroy(transform.parent.gameObject);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
     }
-
-    
 }
