@@ -62,10 +62,7 @@ public class DroneGunScript : MonoBehaviour
 
     void Fire()
     {
-        if (AudioClip != null && aus != null)
-        {
-            aus.PlayOneShot(AudioClip);
-        }
+       
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
 
@@ -80,6 +77,10 @@ public class DroneGunScript : MonoBehaviour
                 bullets[i].SetActive(true);
                 bullets[i].transform.position = firePoint.position;
                 bs.Launch(direction);
+                if (AudioClip != null && aus != null)
+                {
+                    aus.PlayOneShot(AudioClip);
+                }
                 break;
             }
         }

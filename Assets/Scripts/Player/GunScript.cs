@@ -68,10 +68,7 @@ public class GunScript : MonoBehaviour
 
     void FireProjectile(int mode)
     {
-        if (AudioClip != null && aus != null)
-        {
-            aus.PlayOneShot(AudioClip); 
-        }
+        
 
         float facingDirection = Mathf.Sign(player.transform.localScale.x);
         Vector3 baseDirection = new(facingDirection, 0f, 0f);
@@ -99,7 +96,10 @@ public class GunScript : MonoBehaviour
 
                 bulletscript.Launch(direction);
                 bulletsFired++;
-
+                if (AudioClip != null && aus != null)
+                {
+                    aus.PlayOneShot(AudioClip);
+                }
                 if ((mode == 0 && bulletsFired >= 1) || (mode == 1 && bulletsFired >= 3))
                     break;
             }

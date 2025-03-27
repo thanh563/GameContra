@@ -13,7 +13,7 @@ public class BossProjectile : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         var speed = Random.Range(-4, 4) + movespeed;
 
-        myRigidbody.AddRelativeForce(Vector2.left * (speed + EnemyRunner.rapidsPicked * EnemyRunner.projectileSpeedKoeff), ForceMode2D.Impulse);//playerControleer
+        myRigidbody.AddRelativeForce(Vector2.left * (speed + PlayerMovement.rapidsPicked * PlayerMovement.projectileSpeedKoeff), ForceMode2D.Impulse);//playerControleer
     }
 
     void OnBecameInvisible()
