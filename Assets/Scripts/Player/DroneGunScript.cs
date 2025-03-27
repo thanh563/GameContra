@@ -14,7 +14,7 @@ public class DroneGunScript : MonoBehaviour
 
     public bool upgrade = false;
     private int upgradeLevel = 1;
-    private bool isMainWeapon = false;
+    public bool isMainWeapon = false;
 
     private List<GameObject> bullets;
     public AudioSource aus;

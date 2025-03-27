@@ -5,7 +5,7 @@ public class MenuUI : MonoBehaviour
 {
    public void StartGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("PlayerDev");
     }
     public void ExitGame()
     {

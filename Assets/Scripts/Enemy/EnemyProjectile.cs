@@ -11,7 +11,7 @@ public class EnemyProjectile : MonoBehaviour {
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
-        //myRigidbody.AddRelativeForce(Vector2.right * (movespeed + PlayerController.rapidsPicked * PlayerController.projectileSpeedKoeff), ForceMode2D.Impulse);
+        myRigidbody.AddRelativeForce(Vector2.right * (movespeed + PlayerMovement.rapidsPicked * PlayerMovement.projectileSpeedKoeff), ForceMode2D.Impulse);
     }
 
     void OnBecameInvisible()

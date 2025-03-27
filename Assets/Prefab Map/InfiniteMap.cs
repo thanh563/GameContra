@@ -5,7 +5,7 @@ public class InfiniteMap : MonoBehaviour
     public Transform player;  // Player
     public Transform ground1; // Ground 1 (25f)
     public Transform ground2; // Ground 2 (25f)
-
+    [SerializeField]
     private float groundWidth = 25f; // Chi?u r?ng c?a m?i n?n ??t
     private Transform lastGround; // N?n ??t cu?i cùng mà Player ?ã ?i qua
 

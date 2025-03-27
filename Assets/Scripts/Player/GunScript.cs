@@ -17,7 +17,7 @@ public class GunScript : MonoBehaviour
     [SerializeField]
     private readonly int amoSize = 5;
 
-    private bool isMainWeapon = true;
+    public bool isMainWeapon = true;
 
     public int currentUpgrade = 0;
     public AudioSource aus;
