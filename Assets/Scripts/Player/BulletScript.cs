@@ -46,7 +46,6 @@ public class BulletScript : MonoBehaviour
             {
                 enemyManager.health -= (int)currentDamage;
             }
-            Debug.Log("Hit");
             gameObject.SetActive(false);
         }
         else if (collision.gameObject.CompareTag("Drone"))

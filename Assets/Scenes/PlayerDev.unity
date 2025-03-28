@@ -382,7 +382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 88.3, y: 147.2}
+  m_AnchoredPosition: {x: -13, y: 227}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &418736827
@@ -973,7 +973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 354, y: 36}
+  m_AnchoredPosition: {x: 4, y: -11}
   m_SizeDelta: {x: -294.44, y: -103.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &702610319
@@ -1559,7 +1559,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 186, y: 150}
+  m_AnchoredPosition: {x: 90.97, y: 229.18}
   m_SizeDelta: {x: 90, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1053495084
@@ -1841,7 +1841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -102.299995, y: 150}
+  m_AnchoredPosition: {x: -203.6, y: 229.79999}
   m_SizeDelta: {x: 62.8444, y: 28.8421}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1162438145
@@ -1916,7 +1916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -95.56242, y: 150}
+  m_AnchoredPosition: {x: -196.86244, y: 229.79999}
   m_SizeDelta: {x: 79.4247, y: 34.999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1182020240
@@ -2250,7 +2250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.2, y: 149.9}
+  m_AnchoredPosition: {x: -129.50002, y: 229.69998}
   m_SizeDelta: {x: 33.168, y: 28.8421}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415158513
@@ -2822,8 +2822,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 35}
+  m_AnchoredPosition: {x: 1.0532, y: 0}
+  m_SizeDelta: {x: 164.6, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1816638664
 MonoBehaviour:
@@ -3263,8 +3263,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -190, y: 150}
-  m_SizeDelta: {x: 100, y: 35}
+  m_AnchoredPosition: {x: -324.65118, y: 229.79999}
+  m_SizeDelta: {x: 166.7023, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974146017
 MonoBehaviour:
@@ -3338,7 +3338,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27.9, y: 149.7}
+  m_AnchoredPosition: {x: -129.20001, y: 229.49998}
   m_SizeDelta: {x: 41.7915, y: 34.999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2012106717
@@ -3414,7 +3414,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.3, y: 147.5}
+  m_AnchoredPosition: {x: -73.000015, y: 227.29999}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061721441
@@ -3497,11 +3497,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5022144669367607713, guid: 2aa5d62f65a3fdb4e84b41a2eb1c9ee9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.624
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 5022144669367607713, guid: 2aa5d62f65a3fdb4e84b41a2eb1c9ee9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8039998
+      value: 1.71
       objectReference: {fileID: 0}
     - target: {fileID: 5022144669367607713, guid: 2aa5d62f65a3fdb4e84b41a2eb1c9ee9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3675,6 +3675,10 @@ PrefabInstance:
     - target: {fileID: 6518221252248255425, guid: 0b119dc24511c2f4cadf2070c5474848, type: 3}
       propertyPath: crouchHeight
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6518221252248255425, guid: 0b119dc24511c2f4cadf2070c5474848, type: 3}
+      propertyPath: isInvincible
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6518221252248255425, guid: 0b119dc24511c2f4cadf2070c5474848, type: 3}
       propertyPath: airGunUpgradeText

@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Text moveSpeedUpgradeText;
     [SerializeField] private Text shieldUpgradeText;
     [SerializeField] private Text airGunUpgradeText;
+    [SerializeField] private bool isInvincible = false;
+
     private Vector2 originalColliderSize;
     private Vector2 originalColliderOffset;
     private Vector3 gunPosition;
@@ -178,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void TakeDamage(float damage)
     {
+        if (isInvincible) return;
         health -= damage;
         hpFill.fillAmount = health / 100;
         if (health <= 0)
